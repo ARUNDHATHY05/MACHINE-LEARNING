@@ -1,0 +1,81 @@
+TensorFlow is a comprehensive open-source library for numerical computation and machine learning, developed by Google. It provides a variety of functions and APIs that allow users to build and train machine learning models efficiently. Here are some key TensorFlow functions categorized by their common usage:
+
+### 1. **Tensor Creation Functions:**
+
+- **`tf.constant()`**
+  - **Syntax:** `tf.constant(value, dtype=None, shape=None, name=None)`
+  - **Purpose:** Creates a constant tensor with specified value, dtype, and shape.
+
+- **`tf.Variable()`**
+  - **Syntax:** `tf.Variable(initial_value, trainable=True, dtype=None, name=None)`
+  - **Purpose:** Creates a variable tensor that can be modified during training.
+
+- **`tf.placeholder()`**
+  - **Syntax:** `tf.placeholder(dtype, shape=None, name=None)`
+  - **Purpose:** Defines a placeholder tensor that will be fed with data during execution.
+
+### 2. **Math Operations:**
+
+- **Basic Math Operations (`tf.add`, `tf.subtract`, `tf.multiply`, `tf.divide`, etc.)**
+  - **Purpose:** Perform element-wise arithmetic operations on tensors.
+
+- **`tf.matmul()`**
+  - **Syntax:** `tf.matmul(a, b, transpose_a=False, transpose_b=False, adjoint_a=False, adjoint_b=False, a_is_sparse=False, b_is_sparse=False, name=None)`
+  - **Purpose:** Performs matrix multiplication between tensors `a` and `b`.
+
+- **`tf.reduce_*()` functions (e.g., `tf.reduce_sum()`, `tf.reduce_mean()`, `tf.reduce_max()`, etc.)**
+  - **Purpose:** Compute reductions across dimensions of a tensor (sum, mean, max, etc.).
+
+### 3. **Activation Functions:**
+
+- **`tf.nn.relu()`**
+  - **Syntax:** `tf.nn.relu(features, name=None)`
+  - **Purpose:** Applies Rectified Linear Unit (ReLU) activation function element-wise.
+
+- **`tf.nn.sigmoid()`**
+  - **Syntax:** `tf.nn.sigmoid(x, name=None)`
+  - **Purpose:** Computes the sigmoid of `x` element-wise.
+
+- **`tf.nn.softmax()`**
+  - **Syntax:** `tf.nn.softmax(logits, axis=None, name=None)`
+  - **Purpose:** Computes softmax activations along the specified axis.
+
+### 4. **Loss Functions:**
+
+- **Various Loss Functions (e.g., `tf.losses.mean_squared_error`, `tf.losses.softmax_cross_entropy`, etc.)**
+  - **Purpose:** Compute the loss between predicted outputs and true labels during training.
+
+### 5. **Optimizers:**
+
+- **Various Optimizers (`tf.train.GradientDescentOptimizer`, `tf.train.AdamOptimizer`, etc.)**
+  - **Purpose:** Apply optimization algorithms to minimize the loss function during training.
+
+### 6. **Model Evaluation Metrics:**
+
+- **`tf.metrics.*` functions (e.g., `tf.metrics.accuracy`, `tf.metrics.precision`, etc.)**
+  - **Purpose:** Compute evaluation metrics for models during training or evaluation.
+
+### 7. **Data Input and Output:**
+
+- **`tf.data.Dataset` API**
+  - **Purpose:** Provides tools for creating input pipelines to stream data for training.
+
+### 8. **Model Saving and Restoration:**
+
+- **`tf.train.Saver()`**
+  - **Syntax:** `tf.train.Saver(var_list=None, reshape=False, sharded=False, max_to_keep=5, keep_checkpoint_every_n_hours=10000.0, name=None, restore_sequentially=False, saver_def=None, builder=None, defer_build=False, allow_empty=False, write_version=tf.train.SaverDef.V2)`
+  - **Purpose:** Saves and restores variables of a TensorFlow model.
+
+### 9. **TensorFlow Session Management:**
+
+- **`tf.Session()`**
+  - **Syntax:** `tf.Session(target='', graph=None, config=None)`
+  - **Purpose:** Executes TensorFlow operations and evaluates tensors.
+
+### 10. **Visualization:**
+
+- **`tf.summary.*` functions (e.g., `tf.summary.scalar`, `tf.summary.histogram`, etc.)**
+  - **Purpose:** Create summaries for TensorBoard visualization during training.
+
+These functions provide the building blocks necessary for constructing and training machine learning models in TensorFlow, covering tensor manipulation, mathematical operations, activation functions, loss functions, optimizers, input/output handling, session management, and more. 
+Each function serves a specific role in the overall process of defining, training, and evaluating machine learning models using TensorFlow.
