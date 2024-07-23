@@ -1,0 +1,97 @@
+Certainly! Let's explore some of the core functions in Bokeh along with their syntax and purpose:
+
+### 1. `figure()` function
+
+**Syntax:**
+```python
+from bokeh.plotting import figure
+
+plot = figure(title='Title', x_axis_label='X Label', y_axis_label='Y Label')
+```
+
+**Purpose:**
+The `figure()` function initializes a figure for plotting. It sets up the basic parameters such as title, axis labels, and other properties of the plot.
+
+### 2. Glyphs (e.g., `circle()`, `line()`, `square()`)
+
+**Syntax:**
+```python
+plot.circle(x, y, size=10, color='blue', alpha=0.5)
+```
+
+**Purpose:**
+Glyphs are visual markers used to represent data points on the plot. 
+Bokeh provides various glyph functions (`circle()`, `line()`, `square()`, etc.) to plot different types of markers with customizable attributes like size, color, and transparency.
+
+### 3. `show()` function
+
+**Syntax:**
+```python
+from bokeh.io import show
+
+show(plot)
+```
+
+**Purpose:**
+The `show()` function displays the plot object (`plot` in this case) in a web browser or in a Jupyter notebook if used there. 
+It renders the plot that has been set up and configured using Bokeh.
+
+### 4. `output_file()` function
+
+**Syntax:**
+```python
+from bokeh.io import output_file
+
+output_file('plot.html')
+```
+
+**Purpose:**
+The `output_file()` function specifies where the plot should be saved as an HTML file (`plot.html` in this example). 
+This function is used before calling `show()` to save the plot to a file.
+
+### 5. `ColumnDataSource()` function
+
+**Syntax:**
+```python
+from bokeh.plotting import ColumnDataSource
+
+source = ColumnDataSource(data=dict(x=x_data, y=y_data))
+```
+
+**Purpose:**
+`ColumnDataSource` is a fundamental data structure in Bokeh that maps column names to sequences of data. 
+It is used to provide data to glyphs in an efficient and convenient manner, especially when dealing with large datasets or when updating plots dynamically.
+
+### 6. Widgets (e.g., `Slider`, `Button`, `CheckboxGroup`)
+
+**Syntax:**
+```python
+from bokeh.models import Slider
+
+slider = Slider(start=0, end=100, value=50, step=1, title='Slider')
+```
+
+**Purpose:**
+Bokeh provides a variety of interactive widgets (`Slider`, `Button`, `CheckboxGroup`, etc.) that can be added to plots or layouts. 
+These widgets allow users to interactively control aspects of the plot, such as filtering data or adjusting parameters.
+
+### 7. `layouts` and `gridplot()` function
+
+**Syntax:**
+```python
+from bokeh.layouts import gridplot
+
+layout = gridplot([[plot1, plot2], [plot3, plot4]], sizing_mode='stretch_both')
+```
+
+**Purpose:**
+`gridplot()` is used to arrange multiple plots into a grid layout. It helps in creating complex dashboard-like layouts where multiple plots or widgets are displayed together in a structured grid.
+
+### 8. `bokeh.server` module
+
+**Purpose:**
+Bokeh's server capabilities enable the creation of interactive, real-time data applications. 
+By running a Bokeh server, applications can update and respond to user input dynamically, making it suitable for applications requiring live updates or streaming data.
+
+These functions and concepts form the core of Bokeh's capabilities, enabling users to create sophisticated and interactive visualizations directly from Python. 
+Each function serves a specific purpose in configuring plots, managing data, adding interactivity, or structuring layouts for web-based deployment.
